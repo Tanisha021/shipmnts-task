@@ -25,21 +25,21 @@ const FileComponent = () => {
       type: type,
       children: type === 'folder' ? [] : undefined
     }
-    const updatedStructure = addItemToStructure(structure, selectedItem.id, newItem)
+    const updatedStructure = addItem(structure, selectedItem.id, newItem)
     setStructure(updatedStructure)
     setNewItemName('')
   }
 
   const handleRename = () => {
     if (!selectedItem || !newItemName) return
-    const updatedStruct = renameItemInStruct(structure, selectedItem.id, newItemName)
+    const updatedStruct = renameItem(structure, selectedItem.id, newItemName)
     setStructure(updatedStruct)
     setNewItemName('')
   }
 
   const handleDelete = () => {
     if (!selectedItem) return
-    const updatedStruct = deleteItemFromStruct(structure, selectedItem.id)
+    const updatedStruct = deleteItem(structure, selectedItem.id)
     setStructure(updatedStruct)
     setSelectedItem(null)
   }
