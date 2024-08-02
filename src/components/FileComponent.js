@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Pencil, Trash2, FolderPlus, FilePlus,FolderOpenDot } from 'lucide-react'
 
-const FileExplorer = () => {
+const FileComponent = () => {
   const [structure, setStructure] = useState([
     { id: '1', name: 'Root', type: 'folder', children: [] }
   ])
@@ -98,16 +98,16 @@ const FileExplorer = () => {
   return (
     <div className="flex h-screen">
       <div className="w-1/3 p-4 border-r">
-        <h2 className="text-xl font-bold mb-4">File Structure</h2>
+        <h2 className="text-xl font-bold mb-4">Your File Structure</h2>
         {renderAll(structure)}
       </div>
       <div className="w-2/3 p-4">
-        <h2 className="text-xl font-bold mb-4">Actions</h2>
+        <h2 className="text-xl font-normal mb-4">Perform Actions..</h2>
         <div className="space-y-4">
           <div>
             <Input
               type="text"
-              placeholder="Enter name"
+              placeholder="Give name too your folder/file"
               value={newItemName}
               onChange={(e) => setNewItemName(e.target.value)}
               className="mb-2"
@@ -135,4 +135,4 @@ const FileExplorer = () => {
   )
 }
 
-export default FileExplorer
+export default FileComponent
