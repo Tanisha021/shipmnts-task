@@ -1,0 +1,11 @@
+Build a file structure application where users can create directories and files, similar to GitHub's file explorer or Google Drive.
+ 
+Features:
+Display File Structure: Show a hierarchical view of directories and files.
+Create New Files and Directories: Allow users to add new files and directories.
+Rename Items: Provide functionality to rename files and directories.
+Delete Items: Allow users to remove files and directories.
+Basic Styling: Apply some basic styles to make the interface user-friendly.
+
+
+
